@@ -42,25 +42,12 @@ const Wrapper = styled.nav`
     } /* */
   }
   @media screen and (max-width: 500px) {
-    /* .nospacer {
-      display: none;
-    }
-    .authCover {
-      flex-direction: column;
-    } */
+    padding-right: 0.6rem;
     .rodufyIcon {
       margin-left: 1.5rem;
       width: 2.6rem;
       height: 2.6rem;
     }
-    /* .button {
-      font-size: 15px !important;
-      line-height: 32px !important;
-      height: 31px;
-      width: 80px;
-      margin-top: 1rem;
-      margin-right: 1.5rem;
-    } */
   }
 `;
 
