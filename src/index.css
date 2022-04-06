@@ -1,0 +1,398 @@
+@font-face {
+  font-family: "Chalkboard SE";
+  src: url("./assets/fonts/ChalkboardSE.otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary: #301446;
+  --primary_light: #063f93;
+  --secondary: #149dff;
+  --background: #fafafa;
+  --success: #77e1b4;
+  --danger: #ea7052;
+  --text: #212121;
+  --body_text: #818181;
+  --dark: #000000;
+  --grey_0: #e5e5e5;
+  --grey_1: #07070c;
+  --white: #ffffff;
+  --font_regular: "Chalkboard SE";
+  --filter_primary: brightness(0%) saturate(100%) invert(6%) sepia(87%)
+    saturate(4659%) hue-rotate(210deg) brightness(90%) contrast(98%);
+  --filter_text: brightness(0%) saturate(100%) invert(13%) sepia(97%)
+    saturate(0%) hue-rotate(229deg) brightness(59%) contrast(91%);
+  --filter_secondary: brightness(0%) saturate(100%) invert(57%) sepia(50%)
+    saturate(5835%) hue-rotate(186deg) brightness(104%) contrast(103%);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  font-style: normal;
+}
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  font-style: normal;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #000000;
+  background: #e5e5e5;
+  font-family: var(--font_regular), -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+input {
+  color: inherit;
+}
+input:focus {
+  outline: none;
+}
+.intext input::-webkit-input-placeholder {
+  padding: 0px 2rem;
+}
+input:-internal-autofill-selected,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background: var(--white) !important;
+}
+
+button,
+a {
+  border: none;
+  cursor: pointer;
+  font-family: var(--font_regular);
+  /* background-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  line-height: 20px; */
+}
+
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+select {
+  appearance: none;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+::placeholder {
+  font-size: 16px;
+  font-weight: 300 !important;
+  line-height: 14px;
+}
+
+label {
+  font-family: var(--font_regular);
+  font-style: normal;
+  /* font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em; */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Heading */
+
+h1 {
+  font-family: var(--font_regular);
+}
+
+h2 {
+  font-family: var(--font_regular);
+  color: var(--grey_1);
+}
+
+/* Body */
+.appLogo {
+  font-size: 30px;
+  line-height: 49px;
+}
+.bodySmall {
+  font-size: 26px;
+  line-height: 35px;
+}
+.bodyBolder {
+  font-size: 49px;
+  line-height: 79px;
+}
+.commentsBody {
+  font-size: 30px;
+  line-height: 50px;
+}
+.footerSmall {
+  font-size: 21px;
+  line-height: 26px;
+}
+.regular {
+  font-family: var(--font_regular);
+}
+.numberFont {
+  font-size: 15px;
+  line-height: 17px;
+}
+/* Spacing */
+.paddingSpacing {
+  padding: 0;
+}
+.marginSpacing {
+  margin: 0;
+}
+.testBorder {
+  border: 3px solid red;
+}
+.loader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+}
+/* Description */
+
+.textDescription {
+  font-size: 12px;
+  line-height: 18px;
+}
+.textSmaller {
+  font-size: 10px;
+  line-height: 12px;
+}
+.textSmall {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+/* Colors */
+
+.colorPrimary {
+  color: var(--primary);
+}
+
+.colorSecondary {
+  color: var(--secondary);
+}
+
+.colorDanger {
+  color: var(--danger);
+}
+
+.colorWhite {
+  color: var(--white);
+}
+
+.colorSuccess {
+  color: var(--success);
+}
+
+.colorBodyText {
+  color: var(--body_text);
+}
+
+/* Background colors */
+
+.bgPrimary {
+  background-color: var(--primary);
+}
+.bgBlack {
+  background-color: var(--dark);
+}
+.bgGray {
+  background-color: var(--grey_0);
+}
+.bgDanger {
+  background-color: var(--danger);
+}
+.bgWhite {
+  background-color: var(--white);
+}
+
+/* Other */
+
+.fullWidth {
+  width: 100%;
+}
+.roundRadius {
+  border-radius: 50%;
+}
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.alignEnd {
+  align-items: flex-end;
+}
+
+.alignStart {
+  align-items: flex-start;
+}
+
+.alignSpaceBetween {
+  align-items: space-between;
+}
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifySpaceBetween {
+  justify-content: space-between;
+}
+
+.justifySpaceAround {
+  justify-content: space-around;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.fontLighter {
+  font-weight: 300;
+}
+.normalLight {
+  font-weight: 400;
+}
+.lightBold {
+  font-weight: 500;
+}
+.normalBold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.boldest {
+  font-weight: 900;
+}
+
+.noTextWrap {
+  white-space: nowrap;
+}
+
+.marginTop {
+  margin: -1rem;
+}
+
+/* .stickyTop {
+  position: sticky;
+  top: 0;
+} */
+
+@media screen and (max-width: 768px) {
+  .appLogo {
+    font-size: 20px;
+    line-height: 39px;
+  }
+  .bodyBolder {
+    font-size: 31px;
+    line-height: 59px;
+  }
+  .bodySmall {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .commentsBody {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  /*.footerSmall {
+    font-size: 21px;
+    line-height: 26px;
+  } */
+}
+
+@media screen and (max-width: 500px) {
+  .appLogo {
+    font-size: 17px;
+    line-height: 29px;
+  }
+  .bodyBolder {
+    font-size: 26px;
+    line-height: 39px;
+  }
+  .bodySmall {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .commentsBody {
+    font-size: 23px;
+    line-height: 25px;
+  }
+  .footerSmall {
+    font-size: 16px;
+    line-height: 23px;
+  }
+}
